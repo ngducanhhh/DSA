@@ -6,7 +6,6 @@ public class UF {
     public UF(int n) {
         parent = new int[n];
         cnt = n;
-        res = 0;
         for(int i=0; i<n; ++i) {
             parent[i] = i;
         }
@@ -25,7 +24,6 @@ public class UF {
 
     public void union(int p, int q) {
         cnt--;
-        res++;
         int rootP = find(p);
         int rootQ = find(q);
         if(rootP==rootQ) return;
